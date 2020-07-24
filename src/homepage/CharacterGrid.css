@@ -1,0 +1,14 @@
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container div {
+    margin: 5px;
+    height: 30px;
+    background-color: darkgray;
+    color: white;
+    border: solid thin black;
+}

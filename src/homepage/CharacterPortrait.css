@@ -1,0 +1,18 @@
+figure {
+    display: inline-block;
+    margin: 10px;
+}
+
+figure img {
+    vertical-align: top;
+}
+
+figure figcaption {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    color: lightblue;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
