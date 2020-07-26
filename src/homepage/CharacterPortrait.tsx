@@ -1,16 +1,13 @@
 import React from "react";
-import { ICharacter } from "./character";
 import './CharacterPortrait.css'
 import {Link} from 'react-router-dom'
 
-export const CharacterPortrait = (character: ICharacter) => (
+export const CharacterPortrait = ({character}: {character: string}) => (
     <figure>
-        <Link to={`/${character.name}`}>
-            <img src={require('../media/portraits/' + character.name + '.png')} alt="" height="178" width="218" />
+        <Link to={`/${character}`}>
+            <img src={require(`../media/portraits/${character}.png`)} alt="" height="178" width="218" />
         </Link>
-            <figcaption>{toNameCase(character.name)}</figcaption>
-        
-
+            <figcaption>{toNameCase(character)}</figcaption>
     </figure>
 )
 

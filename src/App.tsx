@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css'
-import { Header } from "./homepage/Header";
-import { CharacterGrid } from './homepage/CharacterGrid';
+import SiteHeader from './homepage/SiteHeader';
+import MainRoute from './homepage/MainRoute';
 
 
 const App: React.FC = () => {
   return (
-      <div className="App">
-        <Header />
-        <CharacterGrid />
-      </div>      
-  );
+    <div>
+      <SiteHeader />
+      <MainRoute />
+    </div>
+  )
 };
 
 export default App;
