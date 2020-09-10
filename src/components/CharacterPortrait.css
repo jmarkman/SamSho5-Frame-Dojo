@@ -1,6 +1,6 @@
 figure {
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
 }
 
 figure img {
@@ -9,7 +9,7 @@ figure img {
 
 figure figcaption {
     text-align: center;
-    font-size: x-large;
+    font-size: larger;
     font-weight: 600;
     color: lightblue;
     background-color: black;

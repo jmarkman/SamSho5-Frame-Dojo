@@ -3,13 +3,13 @@ import './CharacterPortrait.css'
 import {Link} from 'react-router-dom'
 
 export const CharacterPortrait = ({character}: {character: string}) => (
-    <figure>
-        <Link to={`/${character}`}>
-            <img src={require(`../media/portraits/${character}.png`)} alt="" height="178" width="218" />
-        </Link>
-            <figcaption>{toNameCase(character)}</figcaption>
-    </figure>
-)
+        <figure className="figure">
+            <Link to={`/${character}`}>
+                <img className="figure-img img-fluid" src={require(`../media/portraits/${character}.png`)} alt=""/>
+            </Link>
+                <figcaption className="figure-caption">{toNameCase(character)}</figcaption>
+        </figure>
+);
 
 const toNameCase = (name: string) => {
     let trimmedName: string = name.substring(1, name.length);

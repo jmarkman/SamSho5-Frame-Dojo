@@ -1,3 +1,3 @@
 export interface ICharacter {
-    name: string
+    Name: string
 }

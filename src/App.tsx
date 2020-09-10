@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css'
-import SiteHeader from './homepage/SiteHeader';
-import MainRoute from './homepage/MainRoute';
+import SiteHeader from './components/common/SiteHeader';
+import MainRoute from './components/common/MainRoute';
 
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="container">
       <SiteHeader />
       <MainRoute />
     </div>
