@@ -16,3 +16,11 @@ figure figcaption {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.characterCard {
+    width: 10rem;
+}
+
+.characterCard h5 {
+    text-align: center;
+}

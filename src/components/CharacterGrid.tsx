@@ -22,11 +22,20 @@ export const CharacterGrid = () => {
         fetchCharNames();
     }, [charNames]);
 
+    const createRow = (charactersForRow: string[]) => {
+        return (
+            <div className="row justify-content-center">
+
+            </div>
+        );
+    }
+
     return(
         <div>
+            {}
             <div className="row justify-content-center">
-                <div className="col-lg-10">
-                    {charNames.map(c => <CharacterPortrait character={c} />)}
+                <div className="col-auto">
+                    {charNames.slice(0, 4).map(c => <CharacterPortrait character={c} />)}
                 </div>
             </div>
         </div>
