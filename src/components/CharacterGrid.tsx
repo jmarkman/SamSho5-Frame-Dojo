@@ -22,22 +22,35 @@ export const CharacterGrid = () => {
         fetchCharNames();
     }, [charNames]);
 
+    const generateRows = () => {
+        let startSliceIndex = 0;
+        let endSliceIndex = 4;
+        let cardDecks: JSX.Element[] = [];
+
+        while (endSliceIndex <= charNames.length) {
+            let segment = charNames.slice(startSliceIndex, endSliceIndex);
+            let row = createRow(segment);
+
+            cardDecks.push(row);
+
+            startSliceIndex += 4;
+            endSliceIndex += 4;
+        }
+
+        return cardDecks;
+    }
+
     const createRow = (charactersForRow: string[]) => {
         return (
-            <div className="row justify-content-center">
-
+            <div className="card-deck">
+                {charactersForRow.map(c => <CharacterPortrait character={c} />)}
             </div>
         );
     }
 
     return(
         <div>
-            {}
-            <div className="row justify-content-center">
-                <div className="col-auto">
-                    {charNames.slice(0, 4).map(c => <CharacterPortrait character={c} />)}
-                </div>
-            </div>
+            {generateRows()}
         </div>
     );
 }
