@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom'
 import { ICharacter } from './models/character';
-import { IMove } from './models/move';
+import CharacterDescription from "./CharacterDescription";
+import MoveDetails from './MoveDetails';
 
 type UrlInfo = { character: string };
 
-
-export const CharacterDetail = ({ match }: RouteComponentProps<UrlInfo>) => {
-    const [charDetails, setCharDetails] = useState<ICharacter>();
+export const CharacterDetail = ({ match }: RouteComponentProps<UrlInfo>) => { 
+    const defaultChar: ICharacter = { Name: "thumb", Id: 0, GameplayDetails: "", Lore: "", Moves: []};
+    const [charDetails, setCharDetails] = useState<ICharacter>(defaultChar);
 
     useEffect(() => {
         async function fetchCharDetails() {
@@ -21,22 +22,12 @@ export const CharacterDetail = ({ match }: RouteComponentProps<UrlInfo>) => {
         }
 
         fetchCharDetails();
-    });
-
-    const createMoveCard = (moveDetails: IMove) => {
-        return (
-            <div className="media">
-                <div className="media-body">
-                    <h5>{moveDetails.Name}</h5>
-                    <p>{moveDetails.Notes}</p>
-                </div>
-            </div>
-        );
-    };
+    }, [match.params.character]);
 
     return (
         <div>
-            {charDetails?.Moves?.map(m => createMoveCard(m))}
+            <CharacterDescription character={charDetails} />
+            {charDetails?.Moves?.map(m => <MoveDetails move={m} />)}
         </div>
     );
 }

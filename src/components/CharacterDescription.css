@@ -1,0 +1,8 @@
+.characterCardThumbnail {
+    width: 250px;
+    height: 250px;
+}
+
+.characterBlurb {
+    text-align: justify;
+}
