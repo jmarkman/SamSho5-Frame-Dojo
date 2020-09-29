@@ -6,9 +6,11 @@ import MainRoute from './components/common/MainRoute';
 
 const App: React.FC = () => {
   return (
-    <div className="container">
+    <div>
       <SiteHeader />
-      <MainRoute />
+      <div className="container">
+        <MainRoute />
+      </div>
     </div>
   )
 };

@@ -25,7 +25,7 @@ export const CharacterDetail = ({ match }: RouteComponentProps<UrlInfo>) => {
     }, [match.params.character]);
 
     return (
-        <div>
+        <div className="container">
             <CharacterDescription character={charDetails} />
             {charDetails?.Moves?.map(m => <MoveDetails move={m} />)}
         </div>
