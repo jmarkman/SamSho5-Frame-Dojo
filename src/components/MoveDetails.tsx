@@ -55,7 +55,7 @@ export const MoveDetails = ({ move }: { move: IMove }) => {
         <div className="p-4">
             <div className="border border-secondary rounded p-2">
                 <div className="media">
-                    <img className="mr-3" src={require("../media/portraits/thumb.png")} alt="placeholder" height="170px" />
+                    <img className="mr-3" src={require(`../media/portraits/thumb.png`)} alt="placeholder" width="200px" height="180px" />
                     <div className="media-body">
                         <h3 className="mt-0">{move.Name}</h3>
 

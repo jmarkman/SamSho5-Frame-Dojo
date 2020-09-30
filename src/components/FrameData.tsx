@@ -83,15 +83,15 @@ export const MoveEffectsOnHit = ({ move }: { move: IMove }) => {
         <div className="row">
             <div className="col-3">
                 <p className="labelBold">On Hit</p>
-                <p>{move.OnHit}</p>
+                <p>{move.OnHit != null ? move.OnHit : "N/A"}</p>
             </div>
             <div className="col-3">
                 <p className="labelBold">On Backhit</p>
-                <p>{move.OnBackhit}</p>
+                <p>{move.OnBackhit != null ? move.OnBackhit : "N/A"}</p>
             </div>
             <div className="col-3">
                 <p className="labelBold">On Block</p>
-                <p>{move.OnBlock}</p>
+                <p>{move.OnBlock != null ? move.OnBlock : "N/A"}</p>
             </div>
             <div className="col-3">
                 <p className="labelBold">Causes Knockdown</p>
