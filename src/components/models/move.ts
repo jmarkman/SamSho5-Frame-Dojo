@@ -2,6 +2,7 @@ export interface IMove {
     Id: number,
     CharacterId: number,
     Name: string,
+    DisplayName: string,
     Damage: number | null,
     StartupFrames: number | null,
     ActiveFrames: number | null,

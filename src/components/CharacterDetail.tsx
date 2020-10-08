@@ -43,7 +43,7 @@ export const CharacterDetail = ({ match }: RouteComponentProps<UrlInfo>) => {
                 if (item.Name.toLowerCase().includes(searchValue.toLowerCase())) {
                     return true;
                 }
-            }).map(m => <MoveDetails move={m} />)}
+            }).map(m => <MoveDetails move={m} characterName={charDetails.Name} />)}
         </div>
     );
 }
